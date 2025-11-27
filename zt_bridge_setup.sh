@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo Listing Environment variables...
-printf '%s\n' "   Zerotier Address: ${ZT_ADDR}"
+printf '%s\n' "   Zerotier Address: ${ZT_IF}"
 printf '%s\n' "Zerotier Network ID: ${NETWORK_ID}"
 printf '%s\n' "        Bridge Name: ${BR_IF}"
 printf '%s\n' "      LAN Interface: ${LAN_IF}"
@@ -32,7 +32,7 @@ EOF
 
 sudo cat << EOF | sudo tee /etc/systemd/network/25-bridge-br0-zt.network
 [Match]
-Name=$ZT_ADDR
+Name=$ZT_IF
 [Network]
 Bridge=$BR_IF
 EOF
