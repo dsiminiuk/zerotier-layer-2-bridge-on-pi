@@ -15,6 +15,10 @@ case $yn in
       * ) exit;;
 esac
 
+sudo cat << EOF | sudo tee /etc/interfaces
+iface $LAN_IF inet manual
+EOF
+
 sudo cat << EOF | sudo tee /etc/systemd/network/25-bridge-br0.network
 [Match]
 Name=$BR_IF
