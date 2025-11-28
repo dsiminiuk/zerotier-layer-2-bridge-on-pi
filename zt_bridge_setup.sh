@@ -12,7 +12,7 @@ printf '%s\n' "        DNS Address: ${DNS_ADDR}"
 read -p "Do all values appear to be correct? " yn
 case $yn in
      [Yy]* ) echo Proceeding;;
-      * ) exit;;
+     * ) exit;;
 esac
 
 sudo cat << EOF | sudo tee /etc/interfaces
