@@ -48,4 +48,7 @@ Name=$LAN_IF
 Bridge=$BR_IF
 EOF
 
-echo Reboot and expect to be able to login via SSH at $BR_ADDR.
+echo Done. Shutting down...
+sleep 3
+sudo shutdown -h now
+
