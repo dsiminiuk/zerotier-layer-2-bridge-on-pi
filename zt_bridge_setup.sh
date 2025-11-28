@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo Listing Environment variables...
-printf '%s\n' "   Zerotier Address: ${ZT_IF}"
+printf '%s\n' " Zerotier Interface: ${ZT_IF}"
 printf '%s\n' "Zerotier Network ID: ${NETWORK_ID}"
 printf '%s\n' "        Bridge Name: ${BR_IF}"
 printf '%s\n' "      LAN Interface: ${LAN_IF}"
