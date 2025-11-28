@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo Listing Environment variables...
+echo Mandatory environment variables...
 printf '%s\n' " Zerotier Interface: ${ZT_IF}"
 printf '%s\n' "Zerotier Network ID: ${NETWORK_ID}"
 printf '%s\n' "        Bridge Name: ${BR_IF}"
@@ -8,7 +8,6 @@ printf '%s\n' "      LAN Interface: ${LAN_IF}"
 printf '%s\n' "     Bridge Address: ${BR_ADDR}"
 printf '%s\n' "    Gateway ADdress: ${GW_ADDR}"
 printf '%s\n' "        DNS Address: ${DNS_ADDR}"
-
 read -p "Do all values appear to be correct? " yn
 case $yn in
      [Yy]* ) echo Proceeding;;
